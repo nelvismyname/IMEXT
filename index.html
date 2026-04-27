@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>IMEXT Pyodide Encoder</title>
+        <script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js"></script>
+        <script src="website/script.js" defer></script>
+        <link rel="stylesheet" href="website/styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <h2>IMEXT web</h2>
+            <div class="controls">
+                <input type="file" id="file"/>
+                <button onclick="encode()">Encode</button>
+                <button onclick="decode()">Decode</button>
+            </div>
+            <h3>Output</h3>
+            <textarea id="out"></textarea>
+            <img id="preview"/>
+        </div>
+    </body>
+</html>
