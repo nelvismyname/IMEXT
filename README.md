@@ -1,4 +1,4 @@
-![alt text](assets/banner.png)
+![](assets/banner.png)
 <h1 align="center">IMEXT</h1>
 Send compressed Images with Facebook's Free Data through Text
 
@@ -49,6 +49,8 @@ Meta string:
 >IMEXT|v1.0|meta|1|37|88.26
 >```
 
+## Compression Rate
+![](assets/comparison.png)
 
 ## The Vision
 I was once outside minding my own business, when I wanted to send an Image to someone but I only had Free Data from Facebook.
