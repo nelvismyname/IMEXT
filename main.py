@@ -45,7 +45,7 @@ HeaderSize: Final[int] = struct.calcsize(Structure)
 class ImageCodec:
     __slots__ = ()
     ChunkSize = 1800
-    
+
     @staticmethod
     def ProcessImage(Source: Path) -> tuple[int, int, bytes]:
         with Image.open(Source) as Photo:
@@ -56,7 +56,7 @@ class ImageCodec:
         Buffer = io.BytesIO()
         Thumbnail.save(Buffer, format="PNG", optimize=True)
         return OriginalWidth, OriginalHeight, Buffer.getvalue()
-    
+
     @staticmethod
     def Encode(ImagePath: str) -> list[str]:
         Source = Path(ImagePath)
@@ -87,7 +87,7 @@ class ImageCodec:
             Lines.append(f"{Header}|v{Version}|chunk|{Index}|{Total}|:{Chunk}:")
         ImageCodec._LastCompressionRate = CompressionRate
         return Lines
-    
+
     @staticmethod
     def Decode(Lines: list[str], OutputDir: str | None = None) -> Path:
         if not Lines:
